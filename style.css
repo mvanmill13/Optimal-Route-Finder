@@ -1,0 +1,98 @@
+/* Set the background color and font color for the body */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Set the font family and font size for all text elements */
+  body, input, button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Center the content on the page */
+  .container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  /* Style the heading and subheading */
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the form inputs */
+  form input[type="text"] {
+    display: block;
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style the form submit button */
+  form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Style the optimal route */
+  .route {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .route h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .route p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Add a responsive grid system */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .col {
+    float: left;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .col {
+      width: 50%;
+    }
+  }
+  

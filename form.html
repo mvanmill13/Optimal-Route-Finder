@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Find Optimal Route</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOwpvoW22Is5oQbh3vOebuDwE0lO8n3BA&libraries=places"></script>
+    <script>
+      function initAutocomplete() {
+        {% for i in range(form.num_addresses.data|int) %}
+        var input{{ i }} = document.getElementById('address{{ i+1 }}');
+        var autocomplete{{ i }} = new google.maps.places.Autocomplete(input{{ i }});
+        {% endfor %}
+      }
+    </script>
+  </head>
+  <body onload="initAutocomplete()">
+    <h1>Find Optimal Route</h1>
+    <form method="POST" action="/">
+      {{ form.csrf_token }}
+      {{ form.num_addresses.label }} {{ form.num_addresses }}<br>
+      {% for i in range(form.num_addresses.data|int) %}
+        <input type="text" id="address{{ i+1 }}" name="address{{ i+1 }}" placeholder="Address {{ i+1 }}" required><br>
+      {% endfor %}
+      {{ form.submit }}
+    </form>
+  </body>
+</html>

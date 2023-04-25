@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
     <title>Find Optimal Route</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOwpvoW22Is5oQbh3vOebuDwE0lO8n3BA&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=Your Key Goes Here &libraries=places"></script>
     <script>
       function initAutocomplete() {
         {% for i in range(form.num_addresses.data|int) %}

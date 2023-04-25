@@ -35,7 +35,7 @@ def index():
         if form.validate_on_submit():
             addresses = [field.data for field in form.addresses]
             # Call the routing function
-            api_key = 'AIzaSyDOwpvoW22Is5oQbh3vOebuDwE0lO8n3BA'
+            api_key = 'Your Key Goes Here'
             route = calculate_optimal_route(api_key, addresses)
             return render_template('route.html', route='Optimal Route: ' + ' -> '.join(route))
         
